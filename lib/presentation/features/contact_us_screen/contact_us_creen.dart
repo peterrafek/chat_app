@@ -74,7 +74,7 @@ class ContactUsScreen extends StatelessWidget {
             buildContactTile(
               name: "Customer Service",
               icon: Icons.call_outlined,
-              onTap: ()  async {
+              onTap: () async {
                 try {
                   final Uri url = Uri.parse("tel:+201234567890");
                   if (!await launchUrl(url)) {
@@ -83,8 +83,7 @@ class ContactUsScreen extends StatelessWidget {
                 } catch (e) {
                   print("Error launching URL: $e");
                 }
-
-              }
+              },
             ),
             SizedBox(height: 20),
             buildContactTile(
@@ -99,8 +98,7 @@ class ContactUsScreen extends StatelessWidget {
                 } catch (e) {
                   print("Error launching URL: $e");
                 }
-
-              }
+              },
             ),
 
             SizedBox(height: 20),
@@ -109,14 +107,15 @@ class ContactUsScreen extends StatelessWidget {
               icon: Icons.facebook,
               onTap: () async {
                 try {
-                  final Uri url = Uri.parse("https://www.facebook.com/yourpage");
+                  final Uri url = Uri.parse(
+                    "https://www.facebook.com/yourpage",
+                  );
                   if (!await launchUrl(url)) {
                     print(" Couldn't launch URL");
                   }
                 } catch (e) {
                   print("Error launching URL: $e");
                 }
-
               },
             ),
 
@@ -133,7 +132,6 @@ class ContactUsScreen extends StatelessWidget {
                 } catch (e) {
                   print("Error launching URL: $e");
                 }
-
               },
             ),
             SizedBox(height: 20),
@@ -143,15 +141,16 @@ class ContactUsScreen extends StatelessWidget {
               icon: Icons.camera_alt_outlined,
               onTap: () async {
                 try {
-                  final Uri url = Uri.parse("https://www.instagram.com/yourusername");
+                  final Uri url = Uri.parse(
+                    "https://www.instagram.com/yourusername",
+                  );
                   if (!await launchUrl(url)) {
                     print(" Couldn't launch URL");
                   }
                 } catch (e) {
                   print("Error launching URL: $e");
                 }
-
-              }
+              },
             ),
           ],
         ),
